@@ -2,7 +2,7 @@
   "name": "firstreactproject",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://abbafadil.github.io/firstreactproject",
+  "homepage": "https://abbasfadil.com",
   "type": "module",
   "scripts": {
     "dev": "vite",
