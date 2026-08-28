@@ -2,11 +2,33 @@ import { useState } from "react";
 
 function App(){
   const favg = 
-    ["Minecraft", "Fifa27", "RocketLouge"];
+    [{
+      name : "Minecraft" ,
+      company : "Mojang" ,
+      year : 2011
+    },
+    {
+      name : "GTA V" ,
+      company : "Rockstar",
+      year : 2013
+    },
+    {
+      name : "FIFA",
+      company : "EA" ,
+      year : 2023
+    }];
     return(
       <>
 {favg.map((game) =>{
-  return <h2 key={game}>{game}</h2>;
+  return (
+<div>
+<h1>{game.name}</h1>
+<h2>{game.company}</h2>
+<h2>{game.year}</h2>
+
+</div>
+  
+  )
         
       })};
       </>
@@ -15,4 +37,4 @@ function App(){
 }
 
 
-export default App;
+export default App; 
