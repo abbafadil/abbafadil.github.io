@@ -16,7 +16,7 @@ function App(){
       name : "FIFA",
       company : "EA" ,
       year : 2023
-    }];
+    }]
     return(
       <>
 {favg.map((game) =>{
@@ -37,4 +37,4 @@ function App(){
 }
 
 
-export default App; 
+export default App'
