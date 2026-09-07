@@ -1,8 +1,7 @@
 import { useState } from "react";
 
 function App(){
-  const favg = 
-    [{
+  const [favg, setFavg] = useState([{
       name : "Minecraft" ,
       company : "Mojang" ,
       year : 2011
@@ -11,17 +10,13 @@ function App(){
       name : "GTA V" ,
       company : "Rockstar",
       year : 2013
-    },
-    {
-      name : "FIFA",
-      company : "EA" ,
-      year : 2023
-    }]
+    },])
+    
     return(
       <>
 {favg.map((game) =>{
   return (
-<div>
+<div key={game.name}>
 <h1>{game.name}</h1>
 <h2>{game.company}</h2>
 <h2>{game.year}</h2>
@@ -30,11 +25,11 @@ function App(){
   
   )
         
-      })};
+      })}
       </>
     );
     
 }
 
 
-export default App'
+export default App;
