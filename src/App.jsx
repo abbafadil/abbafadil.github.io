@@ -18,9 +18,9 @@ function App(){
   setFavg([
     ...favg,
     {
-      name: "FIFA",
-      company: "EA",
-      year: 2023
+      name: "RocketLauge",
+      company: "psyonix",
+      year: 2015
     }
   ]);
 }}>
