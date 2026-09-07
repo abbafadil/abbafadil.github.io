@@ -14,6 +14,18 @@ function App(){
     
     return(
       <>
+      <button onClick={() => {
+  setFavg([
+    ...favg,
+    {
+      name: "FIFA",
+      company: "EA",
+      year: 2023
+    }
+  ]);
+}}>
+  Add FIFA
+</button>
 {favg.map((game) =>{
   return (
 <div key={game.name}>
