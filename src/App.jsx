@@ -18,13 +18,13 @@ function App(){
   setFavg([
     ...favg,
     {
-      name: "RocketLauge",
+      name: "RocketLeauge",
       company: "psyonix",
       year: 2015
     }
   ]);
 }}>
-  Add FIFA
+  Add RocketLeauge
 </button>
 {favg.map((game) =>{
   return (
