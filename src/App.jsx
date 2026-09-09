@@ -15,27 +15,28 @@ function App(){
     return(
       <>
       
-  Add Rocket Leauge
-</button>
-{favg.map((game) =>{
-  return (
-<div key={game.name}>
-<h1>{game.name}</h1>
-<h2>{game.company}</h2>
-<h2>{game.year}</h2>
 
-<button onClick={() => {
-  setFavg(
-    favg.filter((item) =>{
-      return item.name !== game.name;
-    })
+{favg.map((game) => {
+  return (
+    <div key={game.name}>
+      <h1>{game.name}</h1>
+      <h2>{game.company}</h2>
+      <h2>{game.year}</h2>
+
+      <button onClick={() => {
+        setFavg(
+          favg.filter((item) => {
+            return item.name !== game.name;
+          })
+        );
+      }}>
+        Delete
+      </button>
+    </div>
   );
-}}>Delete</button>
-</div>
+})}
   
-  )
-        
-      })}
+  
       </>
     );
     
