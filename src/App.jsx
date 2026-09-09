@@ -14,16 +14,7 @@ function App(){
     
     return(
       <>
-      <button onClick={() => {
-  setFavg([
-    ...favg,
-    {
-      name: "Rocket Leauge",
-      company: "psyonix",
-      year: 2015
-    }
-  ]);
-}}>
+      
   Add Rocket Leauge
 </button>
 {favg.map((game) =>{
@@ -33,6 +24,13 @@ function App(){
 <h2>{game.company}</h2>
 <h2>{game.year}</h2>
 
+<button onClick={() => {
+  setFavg(
+    favg.filter((item) =>{
+      return item.name !== game.name;
+    })
+  );
+}}>Delete</button>
 </div>
   
   )
