@@ -26,7 +26,7 @@ function App(){
       <button onClick={() => {
         setFavg(
           favg.map((game) => {
-           if (game.name === "Minecraft") {
+           if (game.name === "GTA V") {
             return{
               ...game,
               year : 2025
