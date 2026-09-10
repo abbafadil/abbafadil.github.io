@@ -25,12 +25,18 @@ function App(){
 
       <button onClick={() => {
         setFavg(
-          favg.filter((item) => {
-            return item.name !== game.name;
+          favg.map((game) => {
+           if (game.name === "Minecraft") {
+            return{
+              ...game,
+              year : 2025
+            };
+           }
+           return game;
           })
         );
       }}>
-        Delete
+        update GTA V
       </button>
     </div>
   );
