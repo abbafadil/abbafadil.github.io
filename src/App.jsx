@@ -36,6 +36,11 @@ function App() {
         name="GTA V"
         company="Rockstar"
         year={2013}
+       />
+        <Game
+        name="Rocketleauge"
+        company="Psyonix"
+        year={2015}
       />
     </>
   );
