@@ -38,7 +38,7 @@ function App() {
         year={2013}
        />
         <Game
-        name="Rocketleauge"
+        name="Rocketleague"
         company="Psyonix"
         year={2015}
       />
