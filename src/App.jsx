@@ -3,15 +3,15 @@ import { useState } from "react";
 function Game({ name, company, year }) {
   return (
     <div>
-      <h1>{name}</h1>
-      <h2>{company}</h2>
-      <h2>{year}</h2>
+      <h2>{name}</h2>
+      <p>Company: {company}</p>
+      <p>Year: {year}</p>
     </div>
   );
 }
 
 function App() {
-  const [favg, setFavg] = useState([
+  const [games, setGames] = useState([
     {
       name: "Minecraft",
       company: "Mojang",
@@ -24,24 +24,44 @@ function App() {
     }
   ]);
 
+  function addGame() {
+    setGames([
+      ...games,
+      {
+        name: "Rocket League",
+        company: "Psyonix",
+        year: 2015
+      }
+    ]);
+  }
+
+  function deleteGame(name) {
+    setGames(
+      games.filter((game) => {
+        return game.name !== name;
+      })
+    );
+  }
+
   return (
     <>
-      <Game
-        name="Minecraft"
-        company="Mojang"
-        year={2011}
-      />
+      <button onClick={addGame}>Add Game</button>
 
-      <Game
-        name="GTA V"
-        company="Rockstar"
-        year={2013}
-       />
-        <Game
-        name="Rocketleague"
-        company="Psyonix"
-        year={2015}
-      />
+      {games.map((game) => {
+        return (
+          <div key={game.name}>
+            <Game
+              name={game.name}
+              company={game.company}
+              year={game.year}
+            />
+
+            <button onClick={() => deleteGame(game.name)}>
+              Delete
+            </button>
+          </div>
+        );
+      })}
     </>
   );
 }
