@@ -28,9 +28,9 @@ function App() {
     setGames([
       ...games,
       {
-        name: "Rocket League",
-        company: "Psyonix",
-        year: 2015
+        name: "Clash Royale",
+        company: "Supercell",
+        year: 2016
       }
     ]);
   }
