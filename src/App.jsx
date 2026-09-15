@@ -18,9 +18,9 @@ function App() {
       year: 2011
     },
     {
-      name: "FIFA 25",
-      company: "EA",
-      year: 2025
+      name: "GTA V",
+      company: "Rockstar",
+      year: 2013
     }
   ]);
 
