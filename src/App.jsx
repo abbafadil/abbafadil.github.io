@@ -4,7 +4,7 @@ function Game({ name, Formed, year }) {
   return (
     <div>
       <h2>{name}</h2>
-      <p>Formed_in: {Formed}</p>
+      <p>Formed: {Formed}</p>
       <p>Year: {year}</p>
     </div>
   );
@@ -52,7 +52,7 @@ function App() {
           <div key={game.name}>
             <Game
               name={game.name}
-              company={game.Formed}
+              Formed={game.Formed}
               year={game.year}
             />
 
