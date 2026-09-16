@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-function Game({ name, Formed_in, year }) {
+function Game({ name, Formed, year }) {
   return (
     <div>
       <h2>{name}</h2>
-      <p>Formed_in: {Formed_in}</p>
+      <p>Formed_in: {Formed}</p>
       <p>Year: {year}</p>
     </div>
   );
@@ -14,12 +14,12 @@ function App() {
   const [games, setGames] = useState([
     {
       name: "Jack Off Jill",
-      Formed_in: "Fort Lauderdale, Florida",
+      Formed: "Fort Lauderdale, Florida",
       year: 1992
     },
     {
       name: "Slowdive",
-      Formed_in: "Reading, Berkshire",
+      Formed: "Reading, Berkshire",
       year: 1989
     }
   ]);
@@ -29,7 +29,7 @@ function App() {
       ...games,
       {
         name: "Hoobastank",
-        company: "Agoura Hills, California",
+        Formed: "Agoura Hills, California",
         year: 1994
       }
     ]);
@@ -52,7 +52,7 @@ function App() {
           <div key={game.name}>
             <Game
               name={game.name}
-              company={game.Formed_in}
+              company={game.Formed}
               year={game.year}
             />
 
