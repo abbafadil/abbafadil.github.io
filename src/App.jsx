@@ -28,7 +28,7 @@ function App() {
     setGames([
       ...games,
       {
-        name: "Clash Royale",
+        name: "Hoobastank",
         company: "Agoura Hills, California",
         year: 1994
       }
@@ -45,14 +45,14 @@ function App() {
 
   return (
     <>
-      <button onClick={addGame}>Add Game</button>
+      <button onClick={addGame}>Add Band</button>
 
       {games.map((game) => {
         return (
           <div key={game.name}>
             <Game
               name={game.name}
-              company={game.company}
+              company={game.Formed_in}
               year={game.year}
             />
 
