@@ -20,9 +20,9 @@ function App() {
   ]);
 
   function addBand() {
-    setBands([
+    setBands(
       Bands.map((band)=>{
-        if (band.name === name){
+        if (band.name === "Deftones"){
           return{
             ...band,
             year:1993,
@@ -31,7 +31,7 @@ function App() {
         return band;
       })
       
-    ]);
+    );
   }
 
   function deleteBand(name) {
