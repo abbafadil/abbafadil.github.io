@@ -13,12 +13,12 @@ function Game({ name, Formed, year }) {
 function App() {
   const [games, setGames] = useState([
     {
-      name: "Jack Off Jill",
+      name: "Jack Off Jill.",
       Formed: "Fort Lauderdale, Florida.",
       year: 1992
     },
     {
-      name: "Slowdive",
+      name: "Slowdive.",
       Formed: "Reading, Berkshire.",
       year: 1989
     }
@@ -28,7 +28,7 @@ function App() {
     setGames([
       ...games,
       {
-        name: "Hoobastank",
+        name: "Hoobastank.",
         Formed: "Agoura Hills, California.",
         year: 1994
       }
