@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Band({ name, Formed, year }) {
+function Game({ name, Formed, year }) {
   return (
     <div>
       <h2>{name}</h2>
@@ -11,17 +11,22 @@ function Band({ name, Formed, year }) {
 }
 
 function App() {
-  const [Bands, setBands] = useState([
+  const [games, setGames] = useState([
     {
-      name: "Deftones",
-      Formed: "Sacramento, California.",
+      name: "Jack Off Jill.",
+      Formed: "Fort Lauderdale, Florida.",
       year: 1992
     },
+    {
+      name: "Slowdive.",
+      Formed: "Reading, Berkshire.",
+      year: 1989
+    }
   ]);
 
-  function addBand() {
-    setBands([
-      ...Bands,
+  function addGame() {
+    setGames([
+      ...games,
       {
         name: "Hoobastank.",
         Formed: "Agoura Hills, California.",
@@ -30,28 +35,28 @@ function App() {
     ]);
   }
 
-  function deleteBand(name) {
-    setBands(
-      Bands.filter((Band) => {
-        return Band.name !== name;
+  function deleteGame(name) {
+    setGames(
+      games.filter((game) => {
+        return game.name !== name;
       })
     );
   }
 
   return (
     <>
-      <button onClick={addBand}>Add Band</button>
+      <button onClick={addGame}>Add Band</button>
 
-      {Bands.map((Band) => {
+      {games.map((game) => {
         return (
-          <div key={Band.name}>
-            <Band
-              name={Band.name}
-              Formed={Band.Formed}
-              year={Band.year}
+          <div key={game.name}>
+            <Game
+              name={game.name}
+              Formed={game.Formed}
+              year={game.year}
             />
 
-            <button onClick={() => deleteBand(Band.name)}>
+            <button onClick={() => deleteGame(game.name)}>
               Delete
             </button>
           </div>
