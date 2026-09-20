@@ -45,7 +45,7 @@ function App() {
       {Bands.map((Band) => {
         return (
           <div key={Band.name}>
-            <Game
+            <Band
               name={Band.name}
               Formed={Band.Formed}
               year={Band.year}
