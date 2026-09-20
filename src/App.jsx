@@ -21,12 +21,16 @@ function App() {
 
   function addBand() {
     setBands([
-      ...Bands,
-      {
-        name: "Hoobastank",
-        Formed: "Agoura Hills, California.",
-        year: 1994,
-      },
+      Bands.map((band)=>{
+        if (band.name === name){
+          return{
+            ...band,
+            year:1993,
+          };
+        }
+        return band;
+      })
+      
     ]);
   }
 
@@ -40,7 +44,7 @@ function App() {
 
   return (
     <>
-      <button onClick={addBand}>Add Band</button>
+      <button onClick={addBand}>Change Year</button>
 
       {Bands.map((band) => {
         return (
