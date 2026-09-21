@@ -25,21 +25,16 @@ function App() {
 
   ]);
 
-  function addBand() {
-    setBands(
-      Bands.map((band)=>{
-        if (band.name === "Deftones"){
-          return{
-            ...band,
-            year:1993,
-          };
-        }
-        return band;
-      })
-      
-    );
-  }
-
+ function addBand() {
+  setBands([
+    ...Bands,
+    {
+      name: "Slowdive",
+      genra: "Shoegaze",
+      year: 1989,
+    },
+  ]);
+}
   function deleteBand(name) {
     setBands(
       Bands.filter((band) => {
@@ -50,7 +45,7 @@ function App() {
 
   return (
     <>
-      <button onClick={addBand}>Change Year</button>
+      <button onClick={addBand}>Add Band</button>
 
       {Bands.map((band) => {
         return (
@@ -59,7 +54,7 @@ function App() {
               name={band.name}
               genra={band.genra}
               year={band.year}
-              deleteBand={(deleteBand)}
+              deleteBand={deleteBand}
             />
 
           </div>
