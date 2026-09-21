@@ -51,7 +51,7 @@ function App() {
           <div key={band.name}>
             <Band
               name={band.name}
-              Formed={band.genra}
+              genra={band.genra}
               year={band.year}
             />
 
