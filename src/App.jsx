@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-function Band({ name, Formed, year }) {
+function Band({ name, Genra, year }) {
   return (
     <div>
       <h2>{name}</h2>
-      <p>Formed in: {Formed}</p>
+      <p>Genra: {Genra}</p>
       <p>Year: {year}</p>
     </div>
   );
@@ -14,7 +14,7 @@ function App() {
   const [Bands, setBands] = useState([
     {
       name: "Deftones",
-      Formed: "Sacramento, California.",
+      Genra: "Alternative Rock.",
       year: 1992,
     },
   ]);
@@ -51,7 +51,7 @@ function App() {
           <div key={band.name}>
             <Band
               name={band.name}
-              Formed={band.Formed}
+              Formed={band.Genra}
               year={band.year}
             />
 
