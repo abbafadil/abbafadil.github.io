@@ -17,7 +17,7 @@ function Band({ name, genra, year, deleteBand }) {
 function App() {
   const [Bands, setBands] = useState([
     {
-      name: "Deftones",
+      name: "Deftones.",
       genra: "Alternative Rock.",
       year: 1992,
     },
@@ -29,7 +29,7 @@ function App() {
   setBands([
     ...Bands,
     {
-      name: "Slowdive",
+      name: "Slowdive.",
       genra: "Shoegaze",
       year: 1989,
     },
