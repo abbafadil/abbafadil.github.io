@@ -15,15 +15,12 @@ function Band({ name, genra, year, deleteBand }) {
 }
 
 function App() {
-  const [Bands, setBands] = useState([
-    {
-      name: "Deftones.",
-      genra: "Alternative Rock.",
-      year: 1992,
-    },
-
-
-  ]);
+  const [byuser, setByuser] = useState("")
+  return(
+<>
+<input onChange={(event) => setByuser(event.target.value)}/>
+</>
+);
 
  function addBand() {
   setBands([
