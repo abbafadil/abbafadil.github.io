@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Band({ name, genra, year, deleteBand }) {
+function byuser({ name, genra, year, deleteBand }) {
   return (
     <div>
       <h2>{name}</h2>
@@ -24,9 +24,9 @@ function App() {
 
  function addBand() {
   setBands([
-    ...Bands,
+    ...byusers,
     {
-      name: "Slowdive.",
+      name: "Slowdive",
       genra: "Shoegaze",
       year: 1989,
     },
@@ -34,8 +34,8 @@ function App() {
 }
   function deleteBand(name) {
     setBands(
-      Bands.filter((band) => {
-        return band.name !== name;
+      byusers.filter(byuser) => {
+        return byuser.name !== name;
       })
     );
   }
@@ -44,10 +44,10 @@ function App() {
     <>
       <button onClick={addBand}>Add Band</button>
 
-      {Bands.map((band) => {
+      {byusers.map((byuser) => {
         return (
-          <div key={band.name}>
-            <Band
+          <div key={byuser.name}>
+            <byuser
               name={band.name}
               genra={band.genra}
               year={band.year}
