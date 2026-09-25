@@ -26,7 +26,7 @@ function App() {
   setBands([
     ...byusers,
     {
-      name: "Slowdive",
+      name: "Slowdive.",
       genra: "Shoegaze",
       year: 1989,
     },
