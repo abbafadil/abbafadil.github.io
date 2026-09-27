@@ -15,6 +15,9 @@ function Band({ name, genra, year, deleteBand }) {
 }
 
 function App() {
+  const [Names, setNames] = useState("");
+  const [Genras, setGenras]= useState("");
+  const [Years, setYears]= useState("");
   const [Bands, setBands] = useState([
     {
       name: "Deftones",
