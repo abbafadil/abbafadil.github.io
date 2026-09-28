@@ -29,17 +29,43 @@ function App() {
       genra: "Shoegaze",
       year: 1989,
     },
-  ]);
+  ]
+)
+
+return(
+<>
+
+<input
+value={Names}
+onChange={(event) => setNames(event.target.value)}
+/>
+
+<input
+value={Genras}
+onChange={(event) => setGenras(event.target.value)}
+/>
+
+<input
+value={Years}
+onChange={(event) => setYears(event.target.value)}
+/>
+
+<button onClick={addBand}>Add youe band</button>
+
+</>
+
+)
+;
 
   function addBand() {
-    setBands([
-      ...Bands,
+    const newBand =
       {
-        name: "Hoobastank",
-        genra: "Alternative Rock",
-        year: 1994,
-      },
-    ]);
+        name: Names ,
+        genra: Genras ,
+        years: Years ,
+      };
+
+      setBands([...Bands, newBand])
   }
 
   function deleteBand(name) {
