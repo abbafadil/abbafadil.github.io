@@ -30,39 +30,15 @@ function App() {
       year: 1989,
     },
   ]
-)
+);
 
-return(
-<>
-
-<input
-value={Names}
-onChange={(event) => setNames(event.target.value)}
-/>
-
-<input
-value={Genras}
-onChange={(event) => setGenras(event.target.value)}
-/>
-
-<input
-value={Years}
-onChange={(event) => setYears(event.target.value)}
-/>
-
-<button onClick={addBand}>Add youe band</button>
-
-</>
-
-)
-;
 
   function addBand() {
     const newBand =
       {
         name: Names ,
         genra: Genras ,
-        years: Years ,
+        year: Years ,
       };
 
       setBands([...Bands, newBand])
@@ -78,7 +54,22 @@ onChange={(event) => setYears(event.target.value)}
 
   return (
     <>
-      <button onClick={addBand}>Add Band</button>
+    <input
+value={Names}
+onChange={(event) => setNames(event.target.value)}
+/>
+
+<input
+value={Genras}
+onChange={(event) => setGenras(event.target.value)}
+/>
+
+<input
+value={Years}
+onChange={(event) => setYears(event.target.value)}
+/>
+
+<button onClick={addBand}>Add youe band</button>
 
       {Bands.map((band) => {
         return (
