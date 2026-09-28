@@ -4,7 +4,7 @@ function Band({ name, genra, year, deleteBand }) {
   return (
     <div>
       <h2>{name}</h2>
-      <p>Genra: {genra}</p>
+      <p>Genre: {genra}</p>
       <p>Year: {year}</p>
 
       <button onClick={() => deleteBand(name)}>
@@ -69,7 +69,7 @@ value={Years}
 onChange={(event) => setYears(event.target.value)}
 />
 
-<button onClick={addBand}>Add youe band</button>
+<button onClick={addBand}>Add your band</button>
 
       {Bands.map((band) => {
         return (
