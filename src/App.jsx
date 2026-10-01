@@ -25,9 +25,27 @@ function App() {
       year: 1992,
     },
     {
-      name: "Slowdive.",
+      name: "Slowdive",
       genra: "Shoegaze",
       year: 1989,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
