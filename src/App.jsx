@@ -28,21 +28,6 @@ function App() {
       name: "Slowdive",
       genra: "Shoegaze",
       year: 1989,
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
     },
   ]
 );
@@ -57,6 +42,10 @@ function App() {
       };
 
       setBands([...Bands, newBand])
+
+      setNames("")
+      setGenras("")
+      setYears("")
   }
 
   function deleteBand(name) {
