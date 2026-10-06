@@ -20,49 +20,23 @@ function App() {
   const [Years, setYears]= useState("");
   const [Bands, setBands] = useState([
     {
-      name: "Deftones",
+      name: "Deftones.",
       genra: "Alternative Rock",
       year: 1992,
     },
     {
-      name: "Slowdive",
+      name: "Slowdive.",
       genra: "Shoegaze",
       year: 1989,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
-
-
-
-
     },
   ]
 );
 
 
   function addBand() {
+    if (Names === "" || Genras === "" || Years === "" ){
+      return alert("Please fill all fields");
+    }
     const newBand =
       {
         name: Names ,
