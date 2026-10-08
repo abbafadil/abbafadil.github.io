@@ -27,21 +27,7 @@ function App() {
     {
       name: "Slowdive.",
       genra: "Shoegaze",
-      year: 1989,
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
+      year: 1989,      
     },
   ]
 );
